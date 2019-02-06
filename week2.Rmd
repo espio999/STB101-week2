@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readxl)
+data <- read_excel("data.xlsx")
+
+hist(data$Age)
+hist(data$Tenure)
+hist(data$Rating)
+hist(data$`Hourly Rate`)
+```
+
+```{r}
+plot(data$Age, data$Tenure)
+cor(data$Age, data$Tenure)
+```
+
+```{r}
+plot(data$Age, data$Rating)
+cor(data$Age, data$Rating)
+```
+
+```{r}
+plot(data$Tenure, data$Rating)
+cor(data$Tenure, data$Rating)
+```
+
+```{r}
+plot(data$Age, data$`Hourly Rate`)
+cor(data$Age, data$`Hourly Rate`)
+```
+
+```{r}
+plot(data$Tenure, data$`Hourly Rate`)
+cor(data$Tenure, data$`Hourly Rate`)
+```
